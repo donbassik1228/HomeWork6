@@ -1,7 +1,7 @@
 import os
 import shutil
 import zipfile
-
+import sys
 from pathlib import Path
 
 
@@ -140,10 +140,10 @@ def process_folder(folder_path):
 
 
 if __name__ == "__main__":
-    import sys
+    
 
     if len(sys.argv) != 2:
-        print("Usage: python sort.py <folder_path>")
+        print("Usage: python HmW_6.py <HomeWork6>")
         sys.exit(1)
 
     folder_path = sys.argv[1]
@@ -157,3 +157,11 @@ if __name__ == "__main__":
     
 
     print("Sorting completed.")
+    print("\n Список файлів в кожній категорії:")
+    print("Зображення:", os.listdir("images"))
+    print("Відео:", os.listdir("video"))
+    print("Документи:", os.listdir("documents"))
+    print("Музика:", os.listdir("audio"))
+    print("Архіви:", os.listdir("archives"))
+    print("Невідомі розширення:", os.listdir("other"))
+    
